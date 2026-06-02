@@ -1,0 +1,777 @@
+/* ============================================================
+   ROOT VARIABLES
+============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+
+  --joy-spring: #7ED957;
+  --joy-meadow: #59C173;
+  --joy-mint: #A0E4CB;
+  --joy-lavender: #C7B8EA;
+  --joy-sunshine: #FFD66B;
+  --joy-sky: #9BD3F6;
+  --joy-rose: #F7A8A8;
+  --joy-peach: #FBD1A2;
+  --joy-coral: #F7A8A8;
+  --joy-butterfly: #C48DFD;
+  --joy-cream: #FFF8E7;
+  --joy-forest: #2F5233;
+
+  --shadow-soft: 0 8px 30px rgba(0,0,0,0.08);
+  --shadow-float: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+
+/* ============================================================
+   BASE LANDING PAGE
+============================================================ */
+.landing-container {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+}
+
+.landing-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--joy-spring), var(--joy-meadow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing-subheader {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+}
+
+.landing-button {
+  background: linear-gradient(90deg, var(--joy-sky), var(--joy-lavender));
+  color: var(--foreground);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
+  transition: box-shadow 0.3s ease;
+}
+.landing-button:hover {
+  box-shadow: var(--shadow-float);
+}
+
+.landing-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  margin-top: 2rem;
+}
+.landing-image:hover {
+  box-shadow: var(--shadow-float);
+}
+
+.landing-footer {
+  margin-top: 3rem;
+  font-size: 0.875rem;
+  color: #666666;
+}
+
+.landing-link {
+  color: var(--joy-sky);
+  text-decoration: none;
+  font-weight: 500;
+}
+.landing-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   TEXT GRADIENT
+============================================================ */
+.joy-gradient-text,
+.joy-heading-gradient {
+  background: linear-gradient(90deg, #59c173,#59C173,#5ca9ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* ============================================================
+   GLASS CARDS
+============================================================ */
+.joy-card {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2rem;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.10);
+}
+
+.bg-card {
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.7);
+  backdrop-filter: blur(40px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.10);
+}
+
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+.joy-button,
+.joy-button-warm {
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  transition: 0.3s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  color: white;
+}
+
+.joy-button {
+  background: linear-gradient(to right, var(--joy-spring), var(--joy-meadow));
+}
+
+.joy-button-warm {
+  background: linear-gradient(to right, var(--joy-peach), var(--joy-sunshine));
+}
+
+.joy-button:hover,
+.joy-button-warm:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+
+/* ============================================================
+   BACKGROUND BLOBS
+============================================================ */
+.nature-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.55;
+  transform: translateZ(0);
+}
+
+
+/* ============================================================
+   HERO BACKGROUND
+============================================================ */
+.hero-bg {
+  background: linear-gradient(120deg, #fff7d1 0%, #d6f7df 35%, #e5f6ff 100%);
+}
+
+.bg-gradient-rainbow {
+  background: conic-gradient(
+    from 0deg,
+    var(--joy-peach),
+    var(--joy-lavender),
+    var(--joy-sunshine),
+    var(--joy-spring),
+    var(--joy-mint),
+    var(--joy-sky)
+  );
+  opacity: 0.35 !important;
+  filter: blur(80px);
+}
+
+
+/* ============================================================
+   HERO CARD GLOW
+============================================================ */
+.hero-card-glow {
+  position: absolute;
+  inset: -30px;
+  z-index: -1;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 247, 209, 0.7),
+    rgba(208, 255, 229, 0.6),
+    rgba(221, 240, 255, 0.5),
+    transparent 70%
+  );
+  filter: blur(50px);
+  border-radius: 2rem;
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   MOOD TILE
+============================================================ */
+.mood-tile {
+  border-radius: 1rem;
+  padding: 0.9rem;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.25s ease;
+}
+.mood-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+}
+
+.mood-tile-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.mood-tile-content {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+@keyframes float-delayed {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+.animate-float-delayed { animation: float-delayed 7s ease-in-out infinite; }
+
+@keyframes pulse-soft {
+  0%,100% { opacity: .4; }
+  50% { opacity: .8; }
+}
+.animate-pulse-soft { animation: pulse-soft 5s ease-in-out infinite; }
+
+@keyframes sway {
+  0%,100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+.animate-sway { animation: sway 4s ease-in-out infinite; }
+
+@keyframes bounce-gentle {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-bounce-gentle { animation: bounce-gentle 3s ease-in-out infinite; }
+
+@keyframes wiggle {
+  0%,100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+}
+.animate-wiggle { animation: wiggle 2s ease-in-out infinite; }
+
+/* ---- NEW ANIMATION ADDED HERE ---- */
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ---------------------------------- */
+
+
+.butterfly-path {
+  animation: float 6.5s ease-in-out infinite, sway 5s ease-in-out infinite;
+}
+
+/* ============================================================
+   FEATURED SERVICES — EXACT SCREENSHOT STYLE (FINAL FIXED)
+============================================================ */
+
+
+.service-card {
+  background: #fffdf4;
+  border-radius: 28px;
+  padding: 2.2rem;
+  height: 100%;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  transition: 
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card:hover {
+  transform: scale(1.045);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.14);
+}
+
+
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #163020;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.service-desc {
+  color: #6d7b72;
+  font-size: 0.98rem;
+  line-height: 1.45rem;
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+
+
+.service-explore {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: #00a86b;
+  font-size: 0.9rem;
+  gap: 6px;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  transition: color 0.3s ease;
+}
+.group:hover .service-explore span {
+  transform: translateX(6px);
+}
+
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform 0.45s ease;
+  margin-bottom: 1.4rem;
+}
+
+
+.group:hover .service-icon {
+  transform: rotate(-8deg) scale(1.12);
+}
+
+/* FORCE THE GRADIENT TO RENDER EVEN IF TAILWIND RESET OVERRIDES */
+/* .service-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: inherit !important; 
+  z-index: -1;
+} */
+
+
+/* HEADINGS – elegant serif */
+.font-display,
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.01em;
+}
+
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+
+
+/* ButterFlyLayer */
+.butterfly-path {
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+}
+.diamond-butterfly {
+  animation: diamond-move 12s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes diamond-move {
+  0%   { transform: translate(0, -40px); }
+  25%  { transform: translate(40px, 0); }
+  50%  { transform: translate(0, 40px); }
+  75%  { transform: translate(-40px, 0); }
+  100% { transform: translate(0, -40px); }
+}
+
+
+/* Hero Section */
+.home{
+  background: linear-gradient(90deg,#f2ecff 0%,#e9f3ff 35%,#eaf8f1 70%,#f7fffb 100%);
+}
+
+/* =========================================================
+   ABOUT SECTION — AUTO CHANGING CARD (FINAL REFERENCE STYLE)
+========================================================= */
+
+/* Background glow */
+.bg-gradient-meadow {
+  background: linear-gradient(90deg,#f2ecff 0%,#e9f3ff 35%,#eaf8f1 70%,#f7fffb 100%);
+  /* background:
+    radial-gradient(circle at 65% 55%, rgba(255, 220, 140, 0.55), transparent 55%),
+    radial-gradient(circle at 30% 30%, rgba(190, 235, 220, 0.55), transparent 60%),
+    linear-gradient(180deg, #f1fbf7, #f9fdfb); */
+}
+
+/* Main auto card */
+.about-auto-card {
+  background: rgba(255, 255, 245, 0.92);
+  backdrop-filter: blur(40px);
+  border-radius: 3.5rem;
+  padding: 4.5rem 3.5rem;
+  max-width: 560px;
+  text-align: center;
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.08),
+    60px 0 140px rgba(255, 215, 130, 0.45);
+  position: relative;
+}
+
+/* Soft bottom glow under card */
+.about-auto-card::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: -35px;
+  height: 45px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(180, 230, 210, 0.6),
+    transparent 70%
+  );
+  filter: blur(25px);
+  z-index: -1;
+}
+
+/* Icon spacing */
+.about-auto-card > div:first-child {
+  margin-bottom: 1.5rem;
+}
+
+/* Indicator container */
+.about-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2.5rem;
+}
+
+/* Inactive indicator */
+.about-indicators .indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(150, 200, 180, 0.4);
+  transition: all 0.4s ease;
+}
+
+/* Active indicator (pill style) */
+.about-indicators .indicator.active {
+  width: 38px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--joy-spring),
+    var(--joy-meadow)
+  );
+}
+
+
+
+/* CTA SECTION  */
+
+.cta-card {
+  position: relative;
+  border-radius: 3.75rem;
+  padding: 4.8rem 5.2rem;
+
+  /* directional pastel gradient (IMPORTANT) */
+  background:
+    linear-gradient(
+      100deg,
+      rgba(215, 245, 235, 0.95) 0%,
+      rgba(178, 196, 230, 0.95) 45%,
+      rgba(233, 169, 238, 0.95) 100%
+    );
+
+  backdrop-filter: blur(50px);
+
+  box-shadow:
+    0 50px 120px rgba(0, 0, 0, 0.10),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+
+  overflow: hidden;
+}
+
+/* INNER SOFT GLOW (reference magic) */
+.cta-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(
+      circle at 70% 50%,
+      rgba(255, 220, 140, 0.45),
+      transparent 60%
+    );
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* CTA Button — floating like reference */
+.cta-button {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 1.15rem 2.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  color: white;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    to right,
+    var(--joy-spring),
+    var(--joy-meadow)
+  );
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+  transition: all 0.35s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.22);
+}
+
+/* Decorative elements placement (match ref) */
+.cta-flower {
+  position: absolute;
+  top: 3rem;
+  left: 4rem;
+  font-size: 3rem;
+  z-index: 1;
+}
+
+.cta-butterfly {
+  position: absolute;
+  top: 2.5rem;
+  right: 4rem;
+  font-size: 2.4rem;
+  opacity: 0.75;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.cta-flower-small {
+  position: absolute;
+  bottom: 3rem;
+  left: 7rem;
+  font-size: 1.4rem;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+
+/* FOOTER */
+
+.footer-section {
+  position: relative;
+  padding: 4rem 2rem 3rem;
+  background: linear-gradient(90deg,#f2ecff 0%,#e9f3ff 35%,#eaf8f1 70%,#f7fffb 100%);
+  overflow: hidden;
+}
+
+/* big soft glow */
+.footer-bg-glow {
+  position: absolute;
+  inset: -30%;
+  background:
+    radial-gradient(circle at 70% 40%, rgba(255, 225, 150, 0.55), transparent 55%),
+    radial-gradient(circle at 30% 50%, rgba(190, 240, 220, 0.55), transparent 60%);
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 4rem;
+}
+
+/* logo */
+.footer-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 1.2rem;
+  background: linear-gradient(to br, var(--joy-spring), var(--joy-meadow));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.footer-desc {
+  margin-top: 1.5rem;
+  color: #5f776c;
+  line-height: 1.7;
+}
+
+/* titles */
+.footer-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #1e3b2b;
+  margin-bottom: 1.2rem;
+}
+
+/* links */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.footer-links a {
+  color: #5f776c;
+  text-decoration: none;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--joy-spring);
+  transform: translateX(6px);
+}
+
+/* help boxes */
+.footer-help {
+  margin-top: 1rem;
+  padding: 1rem 1.3rem;
+  border-radius: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  backdrop-filter: blur(20px);
+}
+
+.footer-help.green {
+  background: rgba(200, 245, 220, 0.65);
+}
+
+.footer-help.red {
+  background: rgba(255, 215, 200, 0.65);
+}
+
+/* bottom line */
+.footer-bottom {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7f75;
+}
+
+
+
+
+/* =========================================================
+   GLOBAL FONT — SAME AS FOOTER (FINAL)
+========================================================= */
+
+/* Body text everywhere */
+html, body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--foreground);
+}
+
+/* ALL headings same as footer */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-display {
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.01em;
+}
+
+/* Paragraphs, links, buttons */
+p,
+span,
+a,
+li,
+button,
+input,
+textarea {
+  font-family: "Playfair Display", sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
